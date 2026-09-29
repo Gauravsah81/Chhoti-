@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ff6fa5">
+<title>Happy Birthday Khushi! 🎂💖</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Georgia,"Times New Roman",serif;color:#642746;background:linear-gradient(135deg,#ffe0ec,#fff7fb 50%,#eadfff);overflow-x:hidden}
+button{font:inherit;cursor:pointer;border:0}.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden}.float{position:absolute;bottom:-70px;animation:up linear forwards;opacity:.7}
+@keyframes up{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+main{min-height:100vh;display:grid;place-items:center;padding:22px;position:relative;z-index:2}.card{width:min(100%,560px);padding:35px 24px;text-align:center;border-radius:30px;background:rgba(255,255,255,.78);backdrop-filter:blur(15px);box-shadow:0 20px 70px #9e497633;animation:in .7s ease}
+@keyframes in{from{opacity:0;transform:translateY(25px) scale(.97)}to{opacity:1;transform:none}}
+.hidden{display:none!important}.cake{font-size:78px;animation:pulse 1.5s infinite}@keyframes pulse{50%{transform:scale(1.1)}}
+h1{font-size:clamp(34px,9vw,55px);color:#b72c6b;margin:12px 0}.lead{font-size:18px;line-height:1.7}.btn{padding:14px 25px;border-radius:999px;margin:7px;font-weight:bold;font-size:17px}.pink{background:linear-gradient(135deg,#ff4d91,#d92d73);color:white;box-shadow:0 8px 20px #d92d7338}.light{background:white;color:#a33c69;border:2px solid #ffc5da}
+.gift{font-size:130px;animation:wiggle 1.4s infinite}@keyframes wiggle{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.letter{margin-top:20px;text-align:left;padding:23px;border-radius:20px;background:#fff8fc;border:1px solid #ffd0e0;line-height:1.8;font-size:17px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.tile{padding:20px;border-radius:18px;background:#fff;border:1px solid #ffd0e0;font-weight:bold}
+.conf{position:fixed;top:-30px;z-index:9;animation:fall 3.2s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.music{margin-top:12px;background:#fff;border:1px solid #ffc4d9;color:#873458;padding:10px 17px;border-radius:999px}
+.small{font-size:13px;color:#a65c7e;margin-top:18px}
+@media(max-width:430px){.card{padding:28px 18px}.tiles{grid-template-columns:1fr}.lead{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="bg" id="bg"></div>
+<main>
+<section class="card" id="s1">
+<div class="cake">🎂</div>
+<h1>Happy Birthday<br>Khushi! 💖</h1>
+<p class="lead">Today isn't just another day...<br>It's the day the world got a little brighter because <b>you</b> were born. ✨</p>
+<button class="btn pink" onclick="go(2)">I have a surprise for you 🎁</button>
+<p class="small">Made with lots of love — Gaurav ❤️</p>
+</section>
+
+<section class="card hidden" id="s2">
+<div style="font-size:50px">🎈💗🎈</div>
+<h1>Hey Khushi!</h1>
+<p class="lead">Before you open your surprise, there's one thing I want you to know...</p>
+<div class="letter"><p>You are not just my sister. You're one of the people who makes life brighter, louder, funnier and much more special.</p><p>So today, I hope you smile a little more, laugh a little louder, and remember how loved you are. 🥹❤️</p></div>
+<button class="btn pink" onclick="go(3)">Continue ✨</button>
+</section>
+
+<section class="card hidden" id="s3">
+<div class="gift">🎁</div>
+<h1>Your Surprise Is Inside!</h1>
+<p class="lead">Tap the gift and see what I made for you. 💝</p>
+<button class="btn pink" onclick="openGift()">Open My Gift 🎁</button>
+</section>
+
+<section class="card hidden" id="s4">
+<div style="font-size:80px">🌸🎂🌸</div>
+<h1>Surprise! 💖</h1>
+<p class="lead">A little birthday wish, just for you:</p>
+<div class="letter"><p><b>May this year bring you happiness that stays, dreams that come true, and countless reasons to smile.</b></p><p>May you always have the courage to chase what you want, the strength to get through hard days, and people around you who remind you how wonderful you are.</p></div>
+<button class="btn pink" onclick="go(5)">There's More 💕</button>
+</section>
+
+<section class="card hidden" id="s5">
+<h1>Some Little Reminders 💗</h1>
+<div class="tiles">
+<div class="tile">🌷 You are incredibly special.</div>
+<div class="tile">✨ Your dreams matter.</div>
+<div class="tile">😂 You make life more fun.</div>
+<div class="tile">❤️ You are loved — always.</div>
+</div>
+<button class="btn pink" onclick="go(6)">One Last Surprise 🎉</button>
+</section>
+
+<section class="card hidden" id="s6">
+<div style="font-size:72px">🥹💖</div>
+<h1>Dear Khushi,</h1>
+<div class="letter">
+<p>Happy Birthday to my amazing sister!</p>
+<p>We've had silly fights, crazy moments, endless teasing and memories I'll always keep close to my heart. No matter how much we annoy each other, I'll always be there for you.</p>
+<p>I hope you keep being the kind, funny, beautiful and strong person you are. Never stop dreaming, never stop smiling, and never forget how much you mean to me.</p>
+<p>I'm genuinely lucky to have you as my sister. Here's to another year of happiness, adventures, laughter and beautiful memories.</p>
+<p style="text-align:right"><b>Love you always,<br>Gaurav ❤️</b></p>
+</div>
+<button class="btn pink" onclick="celebrate()">Happy Birthday, Khushi! 🎂</button>
+</section>
+
+<section class="card hidden" id="s7">
+<div style="font-size:85px">🎂🎉💖</div>
+<h1>HAPPY BIRTHDAY<br>KHUSHI! 🥳</h1>
+<p class="lead">Keep shining. Keep smiling. Keep being wonderfully you.</p>
+<div class="letter"><p style="text-align:center;font-size:21px"><b>May your year be filled with love, laughter, success, beautiful surprises and everything your heart wishes for. 🌸✨</b></p><p style="text-align:center">You deserve all the happiness in the world.</p><p style="text-align:center"><b>Love you always — Gaurav ❤️</b></p></div>
+<button class="music" id="music" onclick="toggleMusic()">🎵 Play Birthday Melody</button><br>
+<button class="btn light" onclick="go(1)">Enjoy Again 🔄</button>
+</section>
+</main>
+<script>
+const bg=document.getElementById('bg');
+const symbols=['🎈','💗','💕','✨','🌸','⭐','🎉'];
+function float(){let x=document.createElement('span');x.className='float';x.textContent=symbols[Math.floor(Math.random()*symbols.length)];x.style.left=Math.random()*100+'%';x.style.fontSize=14+Math.random()*28+'px';x.style.animationDuration=5+Math.random()*6+'s';bg.appendChild(x);setTimeout(()=>x.remove(),12000)}
+setInterval(float,650);for(let i=0;i<12;i++)setTimeout(float,i*250);
+function go(n){document.querySelectorAll('.card').forEach(x=>x.classList.add('hidden'));document.getElementById('s'+n).classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
+function openGift(){go(4);confetti(35)}
+function confetti(n=60){const a=['💖','🎉','✨','💕','🌸','🎈'];for(let i=0;i<n;i++){let x=document.createElement('span');x.className='conf';x.textContent=a[Math.floor(Math.random()*a.length)];x.style.left=Math.random()*100+'%';x.style.fontSize=14+Math.random()*18+'px';x.style.animationDelay=Math.random()*1.2+'s';document.body.appendChild(x);setTimeout(()=>x.remove(),5000)}}
+function celebrate(){go(7);confetti(90);startMusic()}
+let ctx=null,playing=false,timer=null;
+const melody=[[261.63,.3],[293.66,.3],[329.63,.4],[392,.4],[329.63,.3],[293.66,.3],[261.63,.5],[329.63,.3],[392,.3],[440,.5],[392,.3],[329.63,.4],[261.63,.5]];
+function note(f,d,t){let o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.11,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+d+.05)}
+function startMusic(){if(playing)return;const C=window.AudioContext||window.webkitAudioContext;if(!C)return;ctx=ctx||new C();ctx.resume();playing=true;document.getElementById('music').textContent='🔇 Stop Melody';function loop(){if(!playing)return;let t=ctx.currentTime+.05;melody.forEach((n,i)=>note(n[0],n[1],t+i*.34));timer=setTimeout(loop,4700)}loop()}
+function toggleMusic(){if(playing){playing=false;clearTimeout(timer);document.getElementById('music').textContent='🎵 Play Birthday Melody'}else startMusic()}
+</script>
+</body>
+</html>
